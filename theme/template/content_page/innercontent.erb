@@ -1,0 +1,19 @@
+<h2 class="chapter"><a href="<%= h(content[:permlink]) %>"><%= content[:title] %></a></h2>
+<% if content[:tags] %>
+  <div class="content-tags"><ul class="tags" >
+  <% content[:tags].each do |tag| %>
+    &nbsp;<li><a href="<%= h(@@changelog.config[:home_url] + tag + ".html") %>"><%= h(tag) %></a></li>
+         <% end %>
+  </ul></div>
+<% end %>
+<img class="eyecatch" src="<%= @@changelog.config[:home_url] + @@changelog.config[:static][:images_path] + content[:eyecatch] %>" alt="<%= content[:title].gsub(/<[^>]+>/,'') %>" />
+  <div class="entry-content">
+    <%= render_this(content[:contents], content) %>
+  </div>
+  <div class="entry-footer">
+  <span class="post-footers">
+     Posted at <abbr class="updated" title="<%= content[:date].strftime('%Y-%m-%d') %>"><%= content[:date].strftime('%Y-%m-%d') %></abbr>
+  </span>
+  <span class="separator">|</span>
+  <a href="<%= content[:permlink] %>" class="permalink" rel="bookmark">Permalink</a>
+</div>

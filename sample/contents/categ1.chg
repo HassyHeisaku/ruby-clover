@@ -1,0 +1,7 @@
+2020-05-31  hassy
+	* 1st article[tags%blog%news][filename%1st]:
+	This is a first article.
+	## Can use markdown
+	* 2nd article[tags%blog%ruby][filename%2nd]:
+	One ChangeLog file can contain multipe articles.
+	ChangeLog filename is the "Category" which configured in the config.yaml.

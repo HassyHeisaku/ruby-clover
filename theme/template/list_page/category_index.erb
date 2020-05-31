@@ -1,0 +1,9 @@
+<%= render('list_page/category_index_header.erb', @categbase_changelog) %>
+<main class="main-list">
+<div class="article-list" id="article-list" >
+<%  @categbase_changelog[:contents].each do |content| %>
+<%= render('list_page/index_innercontent.erb', content) %>
+<% end %>
+</div>
+</main>
+<%= render('partial_common/footer.erb', @categbase_changelog) %>

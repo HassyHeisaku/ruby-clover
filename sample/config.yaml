@@ -1,0 +1,45 @@
+---
+# input related
+:contents_dir: 'contents/*.chg'
+:theme:
+  :dir: 'theme/'
+  :template_path: 'template/'
+  :css_path: 'css/'
+  :javascript_path: 'javascript/'
+  :images_path: 'images/'
+:custom_theme:
+  :dir: 'custom/'
+  :template_path: 'template/'
+  :eyecatch_template_path: 'eyecatch_template/'
+  :css_path: 'css/'
+  :javascript_path: 'javascript/'
+:static:
+  :dir: 'static/'
+  :url_path: ''
+  :images_path: 'images/'
+
+# output related
+:output_dir: 'out/'
+:rss_filename: 'index.rdf'
+
+# url related
+:home_url: 'https://example.com/'
+
+# contents related
+:title: 'example site'
+:subtitle: 'blog by CLoveR'
+:categories:
+- :category_name: null 
+  :dirname: ""
+  :eyecatch: "logo-copy.png"
+- :category_name: 'category1'
+  :file_name: 'categ1'
+  :dirname: "category1/"
+  :eyecatch: "category1_eyecatch.jpg"
+- :category_name: 'category2２'
+  :file_name: 'categ2'
+  :dirname: 'category2/'
+  :eyecatch: "category2_eyecatch.jpg"
+# others
+:twitter: '@example'
+:googleanalysis: 'UA-xxxxxx-xx'

@@ -1,0 +1,5 @@
+<%= render('sitemap/sitemap_header.erb', content) %>
+<% for_render.each do |content| %>
+<%= render('sitemap/sitemap_content.erb', content) %>
+<% end %>
+<%= render('sitemap/sitemap_footer.erb', content) %>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title><%= @categbase_changelog[:category_filter] %>-<%= @@changelog.config[:title] %></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/reset.css">
+		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/style.css">
+  		<meta name="description" content="<%= @categbase_changelog[:category_filter] %>-<%= @@changelog.config[:title] %>" />
+		<meta name="keywords" content="<%= @categbase_changelog[:category_filter] %>,<%= @@changelog.config[:title] %>" />
+  		<link rel="alternate" type="application/rss+xml" title="RSS: <%= h(@@changelog.config[:title]) %>" href="<%= @@changelog.config[:home_url] + @@changelog.config[:rss_filename] %>" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="<%= @@changelog.config[:twitter] %>" />
+		<meta property="og:url" content="<%= @@changelog.config[:home_url] %>" />
+		<meta property="og:title" content="<%= @categbase_changelog[:category_filter] %>-<%= @@changelog.config[:title] %>" />
+		<meta property="og:description" content="<%= @categbase_changelog[:category_filter] %>-<%= @@changelog.config[:title] %>" />
+		<meta property="og:image" content="<%= @@changelog.config[:home_url] %>images/<%= @@changelog.get_category_attr(@categbase_changelog[:category_filter],:eyecatch) %>" >
+		<meta property="twitter:image" content="<%= @@changelog.config[:home_url] %>images/<%= @@changelog.get_category_attr(@categbase_changelog[:category_filter],:eyecatch) %>" >
+      		<% this_categ_dir = @@changelog.config[:home_url] + @@changelog.get_category_attr(@categbase_changelog[:category_filter]) %>
+		<link rel="canonical" href="<%= this_categ_dir %>" />
+                <% if(@categbase_changelog) %>
+                  <script type="text/javascript" src="<%= @changelog.config[:home_url] %>javascript/filter.js" ></script>
+                <% end %>
+                <% if(@changelog.config[:googleanalysis]) %>
+ 		  <!-- Global site tag (gtag.js) - Google Analytics -->
+		  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= @changelog.config[:googleanalysis] %>"></script>
+		  <script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+  			gtag('config', '<%= @changelog.config[:googleanalysis] %>');
+		  </script>
+                <% end %>
+	</head>
+<body>
+<script type="text/javascript">
+<!-- embed tag_map here //-->
+<%= @categbase_changelog[:tag_map] %>
+</script>
+  <header class="header">
+    <h1 class="logo">
+      <a href="<%= h(@@changelog.config[:home_url]) %>"><%= @@changelog.config[:title] %></a>
+    </h1>
+    <h2 class="subtitle"><% if(@categbase_changelog[:category_filter]) %>[<%= @categbase_changelog[:category_filter] %>]-<% end %><%= @@changelog.config[:subtitle] %></h2>
+    <nav class="global-nav">
+      <ul>
+      <% @@changelog.config[:categories].each do |categ| %>
+        <% categ_dir = @@changelog.config[:home_url] + @@changelog.get_category_attr(categ[:category_name]) %>
+        <% if(@categbase_changelog[:category_filter] == categ[:category_name]) %>
+          <li class="nav-item active"><a href="<%= categ_dir %>"><%= (categ[:category_name])? h(categ[:category_name]):"All" %></a></li>
+        <% else %>
+          <li class="nav-item"><a href="<%= categ_dir %>"><%= (categ[:category_name])? h(categ[:category_name]):"All" %></a></li>
+        <% end %>
+      <% end %>
+      </ul>
+    </nav>
+  </header>
