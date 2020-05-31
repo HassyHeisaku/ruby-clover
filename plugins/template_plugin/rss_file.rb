@@ -2,6 +2,7 @@
 
 require 'template_plugin'
 require 'rss'
+require 'rss_cdata'
 
 class RssFile < TemplatePlugin
   def initialize
