@@ -1,4 +1,10 @@
+/config.yaml
+/out/
+/custom/
+/vendor/
+/static/
+/contents/
+/plugins/lib/freefont.ttc
+*.swp
 /lib/test/
 /t/
-/contents/
-/static/
