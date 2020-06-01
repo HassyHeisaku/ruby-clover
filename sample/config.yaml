@@ -1,6 +1,9 @@
 ---
 # input related
 :contents_dir: 'contents/*.chg'
+:static:
+  :dir: 'contents/static/'
+  :images_path: 'images/'
 :theme:
   :dir: 'theme/'
   :template_path: 'template/'
@@ -13,12 +16,8 @@
   :eyecatch_template_path: 'eyecatch_template/'
   :css_path: 'css/'
   :javascript_path: 'javascript/'
-:static:
-  :dir: 'static/'
-  :url_path: ''
-  :images_path: 'images/'
 
-# output related
+# output related (output has fixed dir structure, ./images, ./css, ./javascript
 :output_dir: 'out/'
 :rss_filename: 'index.rdf'
 
