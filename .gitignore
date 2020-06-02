@@ -8,3 +8,4 @@
 *.swp
 /lib/test/
 /t/
+/changelog_model.log
