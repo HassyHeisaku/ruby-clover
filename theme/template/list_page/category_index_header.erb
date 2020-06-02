@@ -20,7 +20,7 @@
       		<% this_categ_dir = @@changelog.config[:home_url] + @@changelog.get_category_attr(@categbase_changelog[:category_filter]) %>
 		<link rel="canonical" href="<%= this_categ_dir %>" />
                 <% if(@categbase_changelog) %>
-                  <script type="text/javascript" src="<%= @changelog.config[:home_url] %>javascript/filter.js" ></script>
+                  <script type="text/javascript" src="<%= @changelog.config[:home_url] %>javascript/tag_filter.js" ></script>
                 <% end %>
                 <% if(@changelog.config[:googleanalysis]) %>
  		  <!-- Global site tag (gtag.js) - Google Analytics -->

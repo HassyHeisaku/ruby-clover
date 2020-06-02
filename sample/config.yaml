@@ -22,7 +22,7 @@
 :rss_filename: 'index.rdf'
 
 # url related
-:home_url: 'https://example.com/'
+:home_url: 'http://localhost:8080/'
 
 # contents related
 :title: 'example site'

@@ -1,14 +1,26 @@
 /* tagcloud filter */
 window.addEventListener('DOMContentLoaded', function() {
+  var t_value = location.search.split('=')[1];
   tag_place = document.getElementById("tagcloud")
   for(tag in tag_map){
-    current_tag[tag] = true;
+	  if(t_value){
+		  current_tag[tag] = false;
+	  }else{
+		  current_tag[tag] = true;
+	  }
     Array.prototype.push.apply(all_ids,tag_map[tag]); 
   }
   all_ids = all_ids.sort().filter(function (x, i, self) { return self.indexOf(x) === i; });
-  visible_ids = all_ids.concat();
+  if(!t_value){
+    visible_ids = all_ids.concat();
+  }
   calc_tag_weight();
   add_tagcloud(current_tag);
+  if(t_value){ 
+    dummy = document.createElement('p');
+    dummy.textContent = t_value;
+    filter_it(dummy);
+  }
 });
 
 var current_tag = {};
