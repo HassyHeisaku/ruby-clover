@@ -28,6 +28,11 @@
   			gtag('config', '<%= @changelog.config[:googleanalysis] %>');
 		  </script>
                 <% end %>
+		<!-- code highlight -->
+		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/vs.min.css">
+		<script src="<%= @@changelog.config[:home_url] %>javascript/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<!-- /code highlight -->
 	</head>
 <body>
   <header class="header">

@@ -16,3 +16,8 @@ mini_magick require ImageMagick. So please install ImageMagick.
 ## Sample site
 my blog uses CLoveR.
 [Dream Driven Development](https://dream.drivendevelopment.jp/)
+
+## 02-June-2022
+CLoveR uses Kramdown and highlight.js
+So you can write down code and highlight them.
+Let's try "sample/" !

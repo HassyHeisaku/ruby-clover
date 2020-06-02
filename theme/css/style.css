@@ -478,6 +478,11 @@ body {
     margin: 0 0 1.5rem 0;
     font-size: 1.1rem;
 }
+.entry-content pre code,
+.entry-content pre code span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,

@@ -1,3 +1,19 @@
+2020-06-02  hassy
+	* using code [tags%ruby][filename%3rd]:
+	CLoveR uses Kramdown and highlight.js
+	So you can write down code and highlight them.
+	~~~~~~ markdown
+	~~~ ruby
+	def abc
+	~~~
+	~~~~~~
+	This code will be shown like below.
+
+	~~~ ruby
+	def abc
+	end
+	~~~
+	looks nice?
 2020-05-31  hassy
 	* 1st article[tags%blog%news][filename%1st]:
 	This is a first article.
