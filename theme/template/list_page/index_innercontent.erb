@@ -3,6 +3,6 @@
           <h3 class="title"><%= content[:title] %></h3>
           <p class="desc"><%=content[:notag][0,140] %></p>
           <time class="date" datetime="<%= content[:date].strftime('%Y-%m-%d') %>"><%= content[:date].strftime('%Y-%m-%d') %></time>
-          <img class="image" src="<%= @@changelog.config[:home_url] + @@changelog.config[:static][:images_path] + content[:eyecatch] %>" alt="<%= content[:title] %>">
+          <img class="image" src="<%= @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] %>" alt="<%= content[:title] %>">
         </a>
       </div>

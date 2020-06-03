@@ -1,0 +1,3 @@
+<% @@changelog.each_static_file_url(:css) do |u| %>
+	<link rel="stylesheet" href="<%= h(u) %>">
+<% end %>

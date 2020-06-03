@@ -4,8 +4,7 @@
 		<meta charset="UTF-8">
   		<title><%= content[:title] %>-<%= @@changelog.config[:title] %></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/reset.css">
-		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/style.css">
+		<%= render('partial_common/header_css.erb') %>
   		<meta name="description" content="<%= content[:title] %>-<%= content[:category] %>-<%= @@changelog.config[:title] %>" />
   		<meta name="keywords" content="<%= content[:title] %>,<%= content[:category] %>,<%= @@changelog.config[:title] %><% if content[:keywords] %><% content[:keywords].each do |k| %>,<%= k %><% end %><% end %><% if content[:tags] %><% content[:tags].each do |t| %>,<%= t %><% end %><% end %>" />
   		<link rel="alternate" type="application/rss+xml" title="RSS: <%= h(@@changelog.config[:title]) %>" href="<%= @@changelog.config[:home_url] + @@changelog.config[:rss_filename] %>" />
@@ -15,8 +14,8 @@
 		<meta property="og:url" content="<%= content[:permlink] %>" />
 		<meta property="og:title" content="<%= content[:title] %>-<%= @@changelog.config[:title] %>" />
 		<meta property="og:description" content="<%= content[:notag][0,140] %>" />
-		<meta property="og:image" content="<%= @@changelog.config[:home_url] + @@changelog.config[:static][:images_path] + content[:eyecatch] %>" >
-		<meta property="twitter:image" content="<%= @@changelog.config[:home_url] + @@changelog.config[:static][:images_path] + content[:eyecatch] %>" >
+		<meta property="og:image" content="<%= @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] %>" >
+		<meta property="twitter:image" content="<%= @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] %>" >
 		<link rel="canonical" href="<%= content[:permlink] %>" />
                 <% if(@changelog.config[:googleanalysis]) %>
  		  <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,7 +28,6 @@
 		  </script>
                 <% end %>
 		<!-- code highlight -->
-		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/vs.min.css">
 		<script src="<%= @@changelog.config[:home_url] %>javascript/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
 		<!-- /code highlight -->

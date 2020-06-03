@@ -25,7 +25,7 @@ class ChangelogModel
     @config[:base_dir] = @@base_dir
     @config[:output_dir] = @@base_dir + @config[:output_dir] 
     @config[:contents_dir] = @@base_dir + @config[:contents_dir] 
-    @config[:images_dir] = @@base_dir + @config[:static][:dir] + @config[:static][:images_path] 
+    @config[:images_dir] = @@base_dir + @config[:static][:dir] + @config[:path_of][:images] 
     @config[:model_plugin_dir] = @@base_dir + 'plugins/model_plugin/'
     @config[:shortcode_plugin_dir] = @@base_dir + 'plugins/shortcode/'
     @config[:template_plugin_dir] = @@base_dir + 'plugins/template_plugin/'
@@ -71,6 +71,14 @@ class ChangelogModel
   def get_contents_id_in_a_tag(tag, category = nil)
     contents = (category.nil?)? @contents : get_contents_in_category(category) 
     contents.map {|c| c[:id] if(c[:tags].is_a?(Array) && c[:tags].include?(tag))}.compact
+  end
+  def each_static_file_url(file_type)
+    location = [:static, :theme, :custom_theme]
+    location.each do |l|
+      Dir.glob(@config[l][:dir] + @config[:path_of][file_type] + '*.css').each do |f|
+        yield @config[:home_url] +  File.basename(f) # if block_given?
+      end
+    end
   end
   private
   def parse_oneday_string(oneday_string,fileName,contents_date)

@@ -4,8 +4,7 @@
 		<meta charset="UTF-8">
 		<title><%= @categbase_changelog[:category_filter] %>-<%= @@changelog.config[:title] %></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/reset.css">
-		<link rel="stylesheet" href="<%= @@changelog.config[:home_url] %>css/style.css">
+		<%= render('partial_common/header_css.erb', @@changelog) %>
   		<meta name="description" content="<%= @categbase_changelog[:category_filter] %>-<%= @@changelog.config[:title] %>" />
 		<meta name="keywords" content="<%= @categbase_changelog[:category_filter] %>,<%= @@changelog.config[:title] %>" />
   		<link rel="alternate" type="application/rss+xml" title="RSS: <%= h(@@changelog.config[:title]) %>" href="<%= @@changelog.config[:home_url] + @@changelog.config[:rss_filename] %>" />

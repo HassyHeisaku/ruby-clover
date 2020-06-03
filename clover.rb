@@ -23,6 +23,6 @@ shortcode_processor.process
 template_processor = TemplateProcessor.new(changelog)
 template_processor.process
 
-dirconstructor.cp_theme_static_files()
-dirconstructor.cp_custom_static_files()
-dirconstructor.cp_static_files()
+dirconstructor.cp_static_files(:theme)
+dirconstructor.cp_static_files(:custom_theme)
+dirconstructor.cp_static_files(:static)
