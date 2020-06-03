@@ -78,7 +78,7 @@ class ChangelogModel
     location = [:static, :theme, :custom_theme]
     location.each do |l|
       Dir.glob(@config[l][:dir] + @config[:path_of][file_type] + '*.css').each do |f|
-        yield @config[:home_url] +  File.basename(f) # if block_given?
+        yield @config[:home_url] +  @config[:path_of][file_type] + File.basename(f) # if block_given?
       end
     end
   end
