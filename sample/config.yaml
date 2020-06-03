@@ -3,26 +3,24 @@
 :contents_dir: 'contents/*.chg'
 :static:
   :dir: 'contents/static/'
-  :images_path: 'images/'
 :theme:
   :dir: 'theme/'
   :template_path: 'template/'
-  :css_path: 'css/'
-  :javascript_path: 'javascript/'
-  :images_path: 'images/'
 :custom_theme:
   :dir: 'custom/'
   :template_path: 'template/'
   :eyecatch_template_path: 'eyecatch_template/'
-  :css_path: 'css/'
-  :javascript_path: 'javascript/'
 
 # output related (output has fixed dir structure, ./images, ./css, ./javascript
 :output_dir: 'out/'
 :rss_filename: 'index.rdf'
-
+:path_of:
+  :css: 'css/'
+  :javascript: 'javascript/'
+  :images: 'images/'
 # url related
 :home_url: 'http://localhost:8080/'
+:site_logo: "logo-copy.png"
 
 # contents related
 :title: 'example site'
@@ -39,6 +37,6 @@
   :file_name: 'categ2'
   :dirname: 'category2/'
   :eyecatch: "category2_eyecatch.jpg"
-# others
+# site owner related
 :twitter: '@example'
 :googleanalysis: 'UA-xxxxxx-xx'
