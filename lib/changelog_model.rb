@@ -36,20 +36,22 @@ class ChangelogModel
     @contents ||= []
     oneday_string = []
     contents_date = Time.now()
+    author = "hoge"
     buf.each do |line|
       line = line[/^\t?([^\r\n]*)/,1]
-      if(line =~ /^\d{4}-\d{2}-\d{2}/)
+      if((all,date_line, author_line = /^(\d{4}-\d{2}-\d{2}) *([^ ]+)?/.match(line).to_a)[0] != nil)
         if(!oneday_string.empty?)
-          one_day = parse_oneday_string(oneday_string,fileName,contents_date) unless(oneday_string.empty?)
+          one_day = parse_oneday_string(oneday_string,fileName,contents_date,author) unless(oneday_string.empty?)
           @contents.concat(one_day)
         end
-        contents_date = Time.parse(line[/^\d{4}-\d{2}-\d{2}/,0])
+        contents_date = Time.parse(date_line[/^\d{4}-\d{2}-\d{2}/,0])
+        author = author_line
         oneday_string = []
       else
         oneday_string << line
       end
     end
-    one_day = parse_oneday_string(oneday_string,fileName,contents_date) unless(oneday_string.empty?)
+    one_day = parse_oneday_string(oneday_string,fileName,contents_date,author) unless(oneday_string.empty?)
     @contents.concat(one_day)
   end
   def get_category(fileName)
@@ -81,7 +83,7 @@ class ChangelogModel
     end
   end
   private
-  def parse_oneday_string(oneday_string,fileName,contents_date)
+  def parse_oneday_string(oneday_string,fileName,contents_date,author)
     return_value = []
     one_content = []
     oneday_string.each do |line|
@@ -100,6 +102,7 @@ class ChangelogModel
     num_content = return_value.length
     return_value.each do |c| 
       c[:date] = contents_date 
+      c[:author] = author
       c[:category] = cat
       c[:catfile] = catfile
       c[:id] = c[:date].strftime("%Y-%0m-%0d") + '-' + c[:catfile] + '-' + num_content.to_s

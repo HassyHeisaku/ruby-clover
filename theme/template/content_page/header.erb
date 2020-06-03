@@ -31,6 +31,7 @@
 		<script src="<%= @@changelog.config[:home_url] %>javascript/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
 		<!-- /code highlight -->
+		<%= render('partial_common/schema.erb',content) %>
 	</head>
 <body>
   <header class="header">

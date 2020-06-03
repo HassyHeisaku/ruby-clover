@@ -1,0 +1,48 @@
+<script type="application/ld+json">
+[
+	<% if !content.empty? %>
+	{
+	  "@context": "https://schema.org",
+	  "@type": "BlogPosting",
+	  "headline": "<%= content[:title] %>",
+	  "image": "<%= @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] %>",
+	  "datePublished": "<%= content[:date].iso8601(0) %>",
+	  "dateModified": "<%= content[:date].iso8601(0) %>",
+	  "author": {
+	    "@type": "Person",
+	    "name": "<%= content[:author] %>"
+	  },
+	  "mainEntityOfPage": { "@type": "WebPage" },
+	  "publisher": {
+	    "@type": "Organization",
+	    "name": "<%= @@changelog.config[:title] %>",
+	    "logo": {
+	      "@type": "ImageObject",
+	      "url": "<%= @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + @@changelog.config[:site_logo] %>",
+	    }
+	  },
+	  "description": "<%= content[:title] %>-<%= content[:category] %>-<%= @@changelog.config[:title] %>",
+	  "keywords": "<%= content[:title] %>,<%= content[:category] %>,<%= @@changelog.config[:title] %><% if content[:keywords] %><% content[:keywords].each do |k| %>,<%= k %><% end %><% end %><% if content[:tags] %><% content[:tags].each do |t| %>,<%= t %><% end %><% end %>",
+	},
+	{
+	  "@context": "https://schema.org",
+	  "@type": "BreadcrumbList",
+	  "itemListElement": [{
+	    "@type": "ListItem",
+	    "position": 1,
+	    "name": "<%= content[:category] %>,,
+	    "item": "<%= @@changelog.config[:home_url] + @@changelog.get_category_attr(content[:category]) %>
+	  }]
+	},
+	<% end %>
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Organization",
+	  "name": "<%= @@changelog.config[:title] %>",
+	  "url": "<%= @@changelog.config[:home_url] %>",,
+	  "sameAs": [
+	    "https://twitter.com/<%= @@changelog.config[:twitter] %>"
+	  ]
+	}
+]
+</script>
