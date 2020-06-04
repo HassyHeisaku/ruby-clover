@@ -684,8 +684,9 @@ h3.heisakuCard {background:#ffffff;}
 .entry-content .heisakuCard_title {font-weight: bold;font-size: 16px;}
 .entry-content .heisakuCard_desc {font-size: 16px;}
 @media screen and (max-width: 478px) {
+.entry-content .heisakuCard { display:block; width:80%; box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15); margin: 0 auto 20px;}
 .entry-content .heisakuCard_content {padding:0px 0px;box-sizing:border-box;width:auto;line-height:1.6rem;}
-.entry-content .heisakuCard img {height:auto;width:auto;}
+.entry-content .heisakuCard img {height:auto;width:80%;}
 .entry-content .heisakuCard_desc {font-size: 12px;line-height:1.2rem;}
 }
 /* tag cloud */

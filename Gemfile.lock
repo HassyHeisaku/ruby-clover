@@ -3,6 +3,9 @@ GEM
   specs:
     kramdown (1.16.2)
     mini_magick (4.10.1)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
 
 PLATFORMS
   ruby
@@ -10,6 +13,7 @@ PLATFORMS
 DEPENDENCIES
   kramdown
   mini_magick
+  nokogiri
 
 BUNDLED WITH
    2.1.4

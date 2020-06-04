@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 Encoding.default_external = 'utf-8'
-require 'model_plugin'
+require "rubygems"
+require "bundler/setup"
 require 'kramdown'
+require 'model_plugin'
 require 'pp'
 
 class Markdown2Html < ModelPlugin

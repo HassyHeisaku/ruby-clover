@@ -5,7 +5,7 @@ class ShortcodePlugin
   def self.set_changelog(changelog)
     @@changelog = changelog
   end
-  def process(content)
+  def process(parameters_array)
    ''
   end
 end

@@ -11,8 +11,8 @@ class ShortcodeProcessor
     @ploader = PluginLoader.new(@changelog.config[:shortcode_plugin_dir])
   end
   def process
-    @ploader.plugins.each_value do |p|
-      p.process
+    @changelog.contents.each do |c|
+      c[:contents].gsub!(/%%([^%]+)%%/){@ploader.plugins[$1.split(' ')[0]].process($1.split(' '))} if(c[:contents][/%%([^%]+)%%/,1])
     end
   end
 end
