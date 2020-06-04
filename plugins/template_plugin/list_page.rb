@@ -15,6 +15,8 @@ class ListPage < TemplatePlugin
       @categbase_changelog[:contents] = @changelog.get_contents_in_category(category)
       if(@categbase_changelog[:contents].length > 0)
         @categbase_changelog[:tag_map]="var tag_map =" + JSON.generate(@changelog.config[:tag_map][category])
+        @categbase_changelog[:contents].sort_by!{|c| c[:id]}.reverse!
+
         File.open(@changelog.config[:output_dir] + @changelog.get_category_attr(category) + "index.html" , 'w', :encoding => 'utf-8') do |f|
           f.puts @erb.result(binding)
         end
