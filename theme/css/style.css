@@ -201,6 +201,7 @@ body {
 .main {
   grid-area:main;
   display: block;
+  min-width:0;
 }
 .main-list {
   grid-area:main;
@@ -477,6 +478,10 @@ body {
 .entry-content blockquote {
     margin: 0 0 1.5rem 0;
     font-size: 1.1rem;
+}
+.entry-content pre {
+	width:80%;
+	overflow-x:scroll;
 }
 .entry-content pre code,
 .entry-content pre code span {
