@@ -12,7 +12,7 @@ class ShortcodeProcessor
   end
   def process
     @changelog.contents.each do |c|
-      c[:contents].gsub!(/%%([^%]+)%%/){@ploader.plugins[$1.split(' ')[0]].process($1.split(' '))} if(c[:contents][/%%([^%]+)%%/,1])
+      c[:contents].gsub!(/%%([^%]+)%%/){@ploader.plugins[$1.split(' ')[0]].process($1,c)} if(c[:contents][/%%([^%]+)%%/,1])
     end
   end
 end

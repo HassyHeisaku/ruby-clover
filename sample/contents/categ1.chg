@@ -1,3 +1,33 @@
+2020-06-05  hassy
+	* Table of Contents Shortcode [tags%shortcode][filename%toc]:
+	now you can put Table of Contents on your post.
+	~~~~~~ markdown
+	％TOC％
+	~~~~~~
+	will add ToC menu based on your h2/h3 header.
+	
+	Here is the menu
+	%TOC%
+	And this is the contents.
+	## Very important section
+	Very important things
+	blabla
+	bla
+	### less important things
+	But I want to tell something.
+	And now you can see the menu on top.
+2020-06-04  hassy
+	* shortcode supported [tags%shortcode][filename%shortcode]:
+	now shortcode supported.
+	first plutin is for "blogcard".
+	~~~~~~ markdown
+	％%BlogCard https://drivendevelopment.jp/%％
+	~~~~~
+	will make this.
+	
+	%%BlogCard https://drivendevelopment.jp/%%
+	
+	Isn't this nice?
 2020-06-02  hassy
 	* using code [tags%ruby][filename%3rd]:
 	CLoveR uses Kramdown and highlight.js

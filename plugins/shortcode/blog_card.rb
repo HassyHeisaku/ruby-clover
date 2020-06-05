@@ -7,8 +7,8 @@ require 'shortcode_plugin'
 require 'pp'
 
 class BlogCard < ShortcodePlugin
-  def process(parameters_array)
-    url = parameters_array[1]
+  def process(parameters,content)
+    url = parameters.split(' ')[1]
     charset = ""
     r = open(url) do |f| 
       charset = f.charset

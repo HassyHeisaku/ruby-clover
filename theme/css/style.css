@@ -493,19 +493,19 @@ body {
     margin-bottom: 1.5rem;
 }
 
-h2.chapter {
-    color : #3366cc;
-    font-size : 1.6rem;
-    padding-left : 1rem;
+h1.chapter {
+    color : #525252;
+    font-size : 2.0rem;
+    padding-left : 2rem;
+    margin-left: 1rem;
     margin-top : 1rem;
-    border-left-width : 0.5rem;
+    border-color: #3366cc;
+    border-left-width : 1.0rem;
     border-left-style : solid;
     margin-bottom: 25px;
     font-weight: 700;
 }
-h2.chapter a{
-	font-size : 1.6rem;
-}
+
 img.eyecatch{
   display:block;
   width:80%;
@@ -668,10 +668,6 @@ right: -84px;
 left: -84px;
 }
 }
-.funya::after {background-image:url(../images/funya.jpeg);}
-.ore::after {background-image:url(../images/author_s.png);}
-.kuma::after {background-image:url(../images/kuma.jpeg);}
-.kirin::after {background-image:url(../images/kirin.png);}
 
 /* blog card */
 

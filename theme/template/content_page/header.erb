@@ -35,10 +35,10 @@
 	</head>
 <body>
   <header class="header">
-    <h1 class="logo">
+    <div class="logo">
       <a href="<%= h(@@changelog.config[:home_url]) %>"><%= @@changelog.config[:title] %></a>
-    </h1>
-    <h2 class="subtitle"><%= @@changelog.config[:subtitle] %></h2>
+    </div>
+    <div class="subtitle"><%= @@changelog.config[:subtitle] %></div>
     <nav class="global-nav">
       <ul>
       <% @@changelog.config[:categories].each do |categ| %>

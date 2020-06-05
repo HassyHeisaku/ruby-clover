@@ -33,7 +33,7 @@
   :file_name: 'categ1'
   :dirname: "category1/"
   :eyecatch: "category1_eyecatch.jpg"
-- :category_name: 'category2２'
+- :category_name: 'category2'
   :file_name: 'categ2'
   :dirname: 'category2/'
   :eyecatch: "category2_eyecatch.jpg"
