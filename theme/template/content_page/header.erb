@@ -5,7 +5,7 @@
   		<title><%= content[:title] %>-<%= @@changelog.config[:title] %></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<%= render('partial_common/header_css.erb') %>
-  		<meta name="description" content="<%= content[:title] %>-<%= content[:category] %>-<%= @@changelog.config[:title] %>" />
+		<meta name="description" content="<%= content[:notag][0,120] %>:<%= content[:title] %>" />
   		<meta name="keywords" content="<%= content[:title] %>,<%= content[:category] %>,<%= @@changelog.config[:title] %><% if content[:keywords] %><% content[:keywords].each do |k| %>,<%= k %><% end %><% end %><% if content[:tags] %><% content[:tags].each do |t| %>,<%= t %><% end %><% end %>" />
   		<link rel="alternate" type="application/rss+xml" title="RSS: <%= h(@@changelog.config[:title]) %>" href="<%= @@changelog.config[:home_url] + @@changelog.config[:rss_filename] %>" />
 
