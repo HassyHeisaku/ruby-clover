@@ -136,7 +136,7 @@ body {
   text-align: center;
   border-radius: 8px;
   color: #666;
-  font-size: 1.3rem;
+  font-size: 1.0rem;
   letter-spacing: 1px;
   transition: 0.15s;
 }
@@ -312,6 +312,11 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 478px) {
+.article-box .desc {
+  font-size: 1.2rem;
+}
+}
 @media screen and (max-width: 800px) {
 .hot-topic .image {
   width: 220px;
@@ -454,7 +459,7 @@ body {
  * -------------------------------- */
 .entry-content {
     font-family: Merriweather;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.84;
     color: rgba(0, 0, 0, .8);
     padding: 0rem 1rem;
@@ -477,7 +482,14 @@ body {
 .entry-content p,
 .entry-content blockquote {
     margin: 0 0 1.5rem 0;
-    font-size: 1.1rem;
+}
+.entry-content pre {
+	width:80%;
+	overflow-x:scroll;
+}
+.entry-content pre code,
+.entry-content pre code span {
+    line-height: 1.5rem;
 }
 .entry-content pre {
 	width:80%;
@@ -495,9 +507,21 @@ body {
 .entry-content h5,
 .entry-content h6 {
     font-weight: 700;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 478px) {
+.entry-content,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    font-size: 1.4rem;
+}
+}
 h1.chapter {
     color : #525252;
     font-size : 2.0rem;
