@@ -484,20 +484,11 @@ body {
     margin: 0 0 1.5rem 0;
 }
 .entry-content pre {
-	width:80%;
+	width:90%;
 	overflow-x:scroll;
 }
 .entry-content pre code,
 .entry-content pre code span {
-    line-height: 1.5rem;
-}
-.entry-content pre {
-	width:80%;
-	overflow-x:scroll;
-}
-.entry-content pre code,
-.entry-content pre code span {
-    font-size: 1.2rem;
     line-height: 1.5rem;
 }
 .entry-content h1,
