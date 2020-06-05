@@ -482,7 +482,6 @@ body {
 .entry-content p,
 .entry-content blockquote {
     margin: 0 0 1.5rem 0;
-    font-size: 1.2rem;
 }
 .entry-content pre {
 	width:80%;
@@ -490,16 +489,6 @@ body {
 }
 .entry-content pre code,
 .entry-content pre code span {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-}
-.entry-content pre {
-	width:80%;
-	overflow-x:scroll;
-}
-.entry-content pre code,
-.entry-content pre code span {
-    font-size: 1.2rem;
     line-height: 1.5rem;
 }
 .entry-content h1,
@@ -513,6 +502,16 @@ body {
     margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 478px) {
+.entry-content,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    font-size: 1.4rem;
+}
 h1.chapter {
     color : #525252;
     font-size : 2.0rem;
