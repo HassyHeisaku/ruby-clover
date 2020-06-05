@@ -485,7 +485,6 @@ body {
 }
 .entry-content pre {
 	width:90%;
-	overflow-x:scroll;
 }
 .entry-content pre code,
 .entry-content pre code span {
