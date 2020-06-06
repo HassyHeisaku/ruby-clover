@@ -14,7 +14,11 @@ body {
 *, *::before, *::after {
   box-sizing: border-box;
 }
-a:link, a:visited, a:hover, a:active {
+a:link {
+  color: #0000cc;
+  text-decoration: none;
+}
+a:visited, a:hover, a:active {
   color: #d03c56;
   text-decoration: none;
 }
