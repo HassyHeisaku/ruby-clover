@@ -151,8 +151,9 @@ class ChangelogModel
     @config[:categories].each do |c|
       @config[:tag_map][c[:category_name]]={}
       @config[:tags].each do |t|
-        @config[:tag_map][c[:category_name]][t] = get_contents_id_in_a_tag(t,c[:category_name])
+        @config[:tag_map][c[:category_name]][t] = get_contents_id_in_a_tag(t,c[:category_name]) 
       end
+      @config[:tag_map][c[:category_name]].delete_if{|k,v| v.empty?}
     end
   end
 end
