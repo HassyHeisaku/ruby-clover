@@ -488,7 +488,8 @@ body {
     margin: 0 0 1.5rem 0;
 }
 .entry-content pre {
-	width:90%;
+	margin:auto;
+        width:95%;
 }
 .entry-content pre code,
 .entry-content pre code span {

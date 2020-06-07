@@ -11,10 +11,9 @@ class BlogCard < ShortcodePlugin
     url = parameters.split(' ')[1]
     charset = ""
     r = open(url) do |f| 
-      charset = f.charset
       f.read 
     end 
-    soup = Nokogiri::HTML.parse(r,nil,charset)
+    soup = Nokogiri::HTML.parse(r,nil,"utf-8")
     meta_list = {
       %q%//meta[@name="description"]/@content% => :description,
       %q%//meta[@name="keywords"]/@content% => :keywords,
