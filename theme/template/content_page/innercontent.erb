@@ -7,6 +7,7 @@
   </ul></div>
 <% end %>
 <img class="eyecatch" src="<%= @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] %>" alt="<%= content[:title].gsub(/<[^>]+>/,'') %>" />
+<%= render('content_page/share_button.erb', content) %>
   <div class="entry-content">
     <%= render_this(content[:contents], content) %>
   </div>
