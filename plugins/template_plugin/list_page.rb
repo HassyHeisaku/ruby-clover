@@ -9,8 +9,8 @@ class ListPage < TemplatePlugin
   end
   def process
     @changelog = @@changelog.dup
-    @categbase_changelog = {}
     [nil, *@changelog.config[:categories].map {|c| c[:category_name]}].each do |category|
+      @categbase_changelog = {}
       @categbase_changelog[:category_filter] = category
       @categbase_changelog[:contents] = @changelog.get_contents_in_category(category)
       if(@categbase_changelog[:contents].length > 0)

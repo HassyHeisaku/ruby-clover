@@ -151,7 +151,7 @@ class ChangelogModel
     @config[:categories].each do |c|
       @config[:tag_map][c[:category_name]]={}
       @config[:tags].each do |t|
-        @config[:tag_map][c[:category_name]][t] = get_contents_id_in_a_tag(t)
+        @config[:tag_map][c[:category_name]][t] = get_contents_id_in_a_tag(t,c[:category_name])
       end
     end
   end
