@@ -1,13 +1,13 @@
 <p style="margin-left:20px;">
 <!-- Twitter button -->
-<span> <a href="https://twitter.com/share?url=<%= h(content[:permlink]) %>&via=@<%= @@changelog.config[:twitter] %>&related=<%= @@changelog.config[:twitter] %>&text=<%= h(content[:title]) %>" rel="nofollow"etarget= "_blank"><span class="icon-twitter"></span></a> </span>
+<span> <a href="https://twitter.com/share?url=<%= h(content[:permlink]) %>&via=<%= @@changelog.config[:twitter] %>&related=<%= @@changelog.config[:twitter] %>&text=<%= h(content[:title]) %>" rel="nofollow"etarget= "_blank"><span class="icon-twitter"></span></a> </span>
 <!-- hatena button -->
 <span> <a href="http://b.hatena.ne.jp/add?mode=confirm&url=<%= h(content[:permlink]) %>&title=<%= h(content[:title]) %>" target="_blank" rel="nofollow"><span class="icon-hatenabookmark"></span></a> </span>
 <!-- Pocket -->
 <span><a href="http://getpocket.com/edit?url=<%= h(content[:permlink]) %>&title=<%= h(content[:title]) %>" rel="nofollow" rel="nofollow" target="_blank"><span class="icon-pocket"></span></a></span>
 </span>
 <!-- feedly -->
-<span><a href='https://feedly.com/i/subscription/feed/<%= h(content[:permlink]) %>' target='blank' rel="nofollow"><span class="icon-feedly"></span></a></span>
+<span><a href='https://feedly.com/i/subscription/feed/<%= h(@@changelog.config[:home_url]) %>' target='blank' rel="nofollow"><span class="icon-feedly"></span></a></span>
 <!-- pinterest -->
 <span> <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-lang="ja" href="https://jp.pinterest.com/pin/create/button/"></a> <script async defer src="//assets.pinterest.com/js/pinit.js"></script></span>
 </p>
