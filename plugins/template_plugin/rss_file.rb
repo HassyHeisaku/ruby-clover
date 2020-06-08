@@ -20,7 +20,7 @@ class RssFile < TemplatePlugin
       maker.items.do_sort = true
 
       @changelog.contents.each do |c|
-        content_image = '<img src="' + @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] + '"/>'
+        content_image = '<img src="' + @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + c[:eyecatch] + '"/>'
         maker.items.new_item do |item|
           item.title = c[:title]
           item.link = c[:permlink]
