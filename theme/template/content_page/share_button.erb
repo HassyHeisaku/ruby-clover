@@ -1,20 +1,14 @@
 <p style="margin-left:20px;">
 <!-- Twitter button -->
-<span>
-<a target="_blank" href="https://twitter.com/share" class="twitter-share-button" data-url="<%= content[:permlink] %>" data-text="<%= content[:title] %>" data-via="heisakusaku" data-lang="ja" data-size="medium">ツイート</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</span>
-<!-- Twitter button -->
+<span> <a href="https://twitter.com/share?url=<%= h(content[:permlink]) %>&via=@<%= @@changelog.config[:twitter] %>&related=<%= @@changelog.config[:twitter] %>&text=<%= h(content[:title]) %>" rel="nofollow"etarget= "_blank"><span class="icon-twitter"></span></a> </span>
 <!-- hatena button -->
-<span>
-<a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label" data-hatena-bookmark-lang="ja" title="このエントリーをは>てなブッ>クマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<span> <a href="http://b.hatena.ne.jp/add?mode=confirm&url=<%= h(content[:permlink]) %>&title=<%= h(content[:title]) %>" target="_blank" rel="nofollow"><span class="icon-hatenabookmark"></span></a> </span>
+<!-- Pocket -->
+<span><a href="http://getpocket.com/edit?url=<%= h(content[:permlink]) %>&title=<%= h(content[:title]) %>" rel="nofollow" rel="nofollow" target="_blank"><span class="icon-pocket"></span></a></span>
 </span>
-<!-- hatena button -->
+<!-- feedly -->
+<span><a href='https://feedly.com/i/subscription/feed/<%= h(content[:permlink]) %>' target='blank' rel="nofollow"><span class="icon-feedly"></span></a></span>
 <!-- pinterest -->
-<span>
-<a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-lang="ja" href="https://jp.pinterest.com/pin/create/button/"></a>
-<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-</span>
-<!-- pinterest -->
+<span> <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-lang="ja" href="https://jp.pinterest.com/pin/create/button/"></a> <script async defer src="//assets.pinterest.com/js/pinit.js"></script></span>
 </p>
 <hr />
