@@ -20,11 +20,12 @@ class RssFile < TemplatePlugin
       maker.items.do_sort = true
 
       @changelog.contents.each do |c|
+        content_image = '<img src="' + @@changelog.config[:home_url] + @@changelog.config[:path_of][:images] + content[:eyecatch] + '"/>'
         maker.items.new_item do |item|
           item.title = c[:title]
           item.link = c[:permlink]
           item.description = c[:title] + '-' + @changelog.config[:title]
-          item.content_encoded = render_this(c[:contents], c)
+          item.content_encoded = render_this(content_image + c[:contents], c)
           item.dc_date = c[:date]
         end
       end
