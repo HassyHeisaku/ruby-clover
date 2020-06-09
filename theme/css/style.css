@@ -485,7 +485,7 @@ body {
 
 .entry-content p,
 .entry-content blockquote {
-    margin: 0 0 1.5rem 0;
+    margin: 0.75rem 0 0.75rem 0;
 }
 .entry-content pre {
 	margin:auto;
