@@ -461,39 +461,39 @@ body {
 /* --------------------------------
  * content page
  * -------------------------------- */
-.yntry-content {
-    font-family: Merriweather;
-    font-size: 1.2rem;
-    line-height: 1.84;
-    color: rgba(0, 0, 0, .8);
-    padding: 0rem 1rem;
-    border-style:dotted;
-    border-color:#cccccc;
-    border-width: 0px 1px 1px 1px;
+.entry-content {
+   font-family: Merriweather;
+   font-size: 1.2rem;
+   line-height: 1.84;
+   color: rgba(0, 0, 0, .8);
+   padding: 0rem 1rem;
+   border-style:dotted;
+   border-color:#cccccc;
+   border-width: 0px 1px 1px 1px;
 }
 
 .entry-content ol,
 .entry-content ul {
-    margin-bottom: 1.5rem;
+   margin-bottom: 1.5rem;
 }
 
 .entry-content ol ol,
 .entry-content ul ul {
-    list-style: disc;
-    margin-bottom: 0rem;
+   list-style: disc;
+   margin-bottom: 0rem;
 }
 
 .entry-content p,
 .entry-content blockquote {
-    margin:1rem 0 1rem 0;
+   margin:1rem 0 1rem 0;
 }
 .entry-content pre {
-	margin:auto;
-        width:95%;
+  margin:auto;
+  width:95%;
 }
 .entry-content pre code,
 .entry-content pre code span {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 .entry-content h1,
 .entry-content h2,
@@ -501,10 +501,10 @@ body {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.0rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.0rem;
 }
 
 @media screen and (max-width: 478px) {
@@ -515,20 +515,20 @@ body {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 }
 h1.chapter {
-    color : #525252;
-    font-size : 2.0rem;
-    padding-left : 2rem;
-    margin-left: 1rem;
-    margin-top : 1rem;
-    border-color: #3366cc;
-    border-left-width : 1.0rem;
-    border-left-style : solid;
-    margin-bottom: 25px;
-    font-weight: 700;
+  color : #525252;
+  font-size : 2.0rem;
+  padding-left : 2rem;
+  margin-left: 1rem;
+  margin-top : 1rem;
+  border-color: #3366cc;
+  border-left-width : 1.0rem;
+  border-left-style : solid;
+  margin-bottom: 25px;
+  font-weight: 700;
 }
 
 img.eyecatch{
