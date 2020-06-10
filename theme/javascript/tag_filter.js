@@ -1,6 +1,6 @@
 /* tagcloud filter */
 window.addEventListener('DOMContentLoaded', function() {
-  var t_value = location.search.split('=')[1];
+  var t_value = decodeURI(location.search.split('=')[1]);
   tag_place = document.getElementById("tagcloud")
   for(tag in tag_map){
 	  if(t_value){
