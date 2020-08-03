@@ -757,7 +757,7 @@ h3.heisakuCard {background:#ffffff;}
 }
 .sidemenu ul.tagcloud li{
 	list-style-type: none;
-	display: inline;
+    display: inline-block;
 	line-height: 2.0rem;
         margin: 5px 10px;
 }
