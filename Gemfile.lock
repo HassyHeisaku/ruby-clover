@@ -1,11 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    kramdown (1.16.2)
+    kramdown (2.3.0)
+      rexml
     mini_magick (4.10.1)
     mini_portile2 (2.4.0)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    rexml (3.2.4)
 
 PLATFORMS
   ruby
