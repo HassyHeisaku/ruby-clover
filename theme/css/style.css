@@ -206,6 +206,8 @@ body {
   grid-area:main;
   display: block;
   min-width:0;
+  width: 80%;
+  margin: 0 auto;
 }
 .main-list {
   grid-area:main;
