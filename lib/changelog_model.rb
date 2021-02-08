@@ -28,6 +28,7 @@ class ChangelogModel
     @config[:images_dir] = @@base_dir + @config[:static][:dir] + @config[:path_of][:images] 
     @config[:model_plugin_dir] = @@base_dir + 'plugins/model_plugin/'
     @config[:shortcode_plugin_dir] = @@base_dir + 'plugins/shortcode/'
+    @config[:custom_shortcode_plugin_dir] = @@base_dir + 'custom/shortcode/'
     @config[:template_plugin_dir] = @@base_dir + 'plugins/template_plugin/'
     @config[:plugin_lib_dir] = @@base_dir + 'plugins/lib/'
   end

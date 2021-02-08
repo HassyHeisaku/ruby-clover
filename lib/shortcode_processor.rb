@@ -9,6 +9,7 @@ class ShortcodeProcessor
     @changelog = changelog
     ShortcodePlugin.set_changelog(@changelog)
     @ploader = PluginLoader.new(@changelog.config[:shortcode_plugin_dir])
+    @ploader.add(@changelog.config[:custom_shortcode_plugin_dir])
   end
   def process
     @changelog.contents.each do |c|
