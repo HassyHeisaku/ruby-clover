@@ -9,7 +9,7 @@ GEM
     mini_portile2 (2.4.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    rexml (3.2.4)
+    rexml (3.2.5)
 
 PLATFORMS
   ruby
