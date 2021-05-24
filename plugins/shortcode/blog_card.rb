@@ -10,7 +10,7 @@ class BlogCard < ShortcodePlugin
   def process(parameters,content)
     url = parameters.split(' ')[1]
     charset = ""
-    r = open(url) do |f| 
+    r = URI.open(url) do |f| 
       f.read 
     end 
     soup = Nokogiri::HTML.parse(r,nil,"utf-8")
