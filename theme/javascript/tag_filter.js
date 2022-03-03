@@ -12,9 +12,6 @@ window.addEventListener('DOMContentLoaded', function() {
     Array.prototype.push.apply(all_ids,tag_map[tag]); 
   }
   all_ids = all_ids.sort().filter(function (x, i, self) { return self.indexOf(x) === i; });
-  if(!t_value){
-    visible_ids = all_ids.concat();
-  }
   calc_tag_weight();
   add_tagcloud(current_tag);
   if(t_value){ 
