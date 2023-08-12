@@ -12,6 +12,8 @@ GEM
       racc (~> 1.4)
     racc (1.6.0)
     rexml (3.2.5)
+    rss (0.3.0)
+      rexml
 
 PLATFORMS
   ruby
@@ -21,6 +23,7 @@ DEPENDENCIES
   kramdown-parser-gfm
   mini_magick
   nokogiri
+  rss
 
 BUNDLED WITH
    2.1.4
